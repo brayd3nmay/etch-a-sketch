@@ -12,3 +12,6 @@ function makeGrid(num) {
         container.appendChild(block);
     }
 }
+
+// initially set the board to 16 * 16 blocks
+makeGrid(16);
