@@ -11,6 +11,10 @@ function makeGrid(num) {
 
         container.appendChild(block);
     }
+
+    console.log('offsetHeight: ' + container.offsetHeight);
+    console.log('clientHeight: ' + container.clientHeight);
+    console.log('computedStyle: ' + getComputedStyle(container).height);
 }
 
 // initially set the board to 16 * 16 blocks
