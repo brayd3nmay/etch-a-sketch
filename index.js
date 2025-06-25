@@ -1,3 +1,5 @@
+const gridButton = document.querySelector("button");
+
 // appends num * num amount of block class divs to the container
 function makeGrid(num) {
     // reset the current grid
@@ -11,11 +13,19 @@ function makeGrid(num) {
 
         container.appendChild(block);
     }
-
-    console.log('offsetHeight: ' + container.offsetHeight);
-    console.log('clientHeight: ' + container.clientHeight);
-    console.log('computedStyle: ' + getComputedStyle(container).height);
 }
 
 // initially set the board to 16 * 16 blocks
 makeGrid(16);
+
+function getGridSize() {
+    let gridSize = prompt("How big would you like the grid to be?");
+
+    return gridSize;
+}
+
+function resizeGrid() {
+    makeGrid(getGridSize());
+}
+
+gridButton.addEventListener('click', resizeGrid);
