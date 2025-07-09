@@ -26,6 +26,12 @@ makeGrid(16);
 function getGridSize() {
     let gridSize = prompt("How big would you like the grid to be?");
 
+    if(gridSize > 100) {
+        alert('Grid size is too big. Stay under 100.');
+
+        return 16;
+    }
+
     return gridSize;
 }
 
