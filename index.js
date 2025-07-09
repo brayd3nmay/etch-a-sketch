@@ -42,10 +42,10 @@ function resizeGrid() {
 gridButton.addEventListener('click', resizeGrid);
 
 container.addEventListener('mouseover', (e) => {
-    let currBlock = e.target;
-
-    if(currBlock.id != 'container') {
-        e.target.classList.add('trail');
+    if(e.target.id != 'container') {
+        let currOpacity = parseFloat(e.target.style.opacity) || 0;
+        if(currOpacity < 1) {
+            e.target.style.opacity = currOpacity + 0.1;
+        }
     }
-    console.log(e.target);
 });

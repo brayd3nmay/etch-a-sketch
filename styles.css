@@ -35,10 +35,7 @@ button {
 }
 
 .block {
-    border: 0.5px solid black;
     flex-grow: 1;
-}
-
-.trail {
+    opacity: 0;
     background-color: black;
 }
