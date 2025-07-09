@@ -6,11 +6,16 @@ function makeGrid(num) {
     const container = document.querySelector('#container');
     container.innerHTML = '';
 
+    // get the width for each block
+    const blockWidth = 100 / num + '%';
+
     // make num amount of blocks for grid
     for(let i = 0; i < num * num; i++) {
         const block = document.createElement('div');
+        
         block.className = 'block';
         block.id = i;
+        block.style.width = blockWidth;
 
         container.appendChild(block);
     }
