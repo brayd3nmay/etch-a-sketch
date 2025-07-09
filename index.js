@@ -10,6 +10,7 @@ function makeGrid(num) {
     for(let i = 0; i < num * num; i++) {
         const block = document.createElement('div');
         block.className = 'block';
+        block.id = i;
 
         container.appendChild(block);
     }
