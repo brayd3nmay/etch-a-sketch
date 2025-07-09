@@ -38,3 +38,7 @@ button {
     border: 0.5px solid black;
     flex-grow: 1;
 }
+
+.trail {
+    background-color: black;
+}

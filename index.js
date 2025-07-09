@@ -1,9 +1,9 @@
 const gridButton = document.querySelector("button");
+const container = document.querySelector('#container');
 
 // appends num * num amount of block class divs to the container
 function makeGrid(num) {
     // reset the current grid
-    const container = document.querySelector('#container');
     container.innerHTML = '';
 
     // get the width for each block
@@ -14,7 +14,6 @@ function makeGrid(num) {
         const block = document.createElement('div');
         
         block.className = 'block';
-        block.id = i;
         block.style.width = blockWidth;
 
         container.appendChild(block);
@@ -35,3 +34,12 @@ function resizeGrid() {
 }
 
 gridButton.addEventListener('click', resizeGrid);
+
+container.addEventListener('mouseover', (e) => {
+    let currBlock = e.target;
+
+    if(currBlock.id != 'container') {
+        e.target.classList.add('trail');
+    }
+    console.log(e.target);
+});
